@@ -1,0 +1,18 @@
+.skills p {
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    transform: translateY(-30px);
+}
+
+@keyframes rotation {
+    100% {
+        transform: rotate(var(--deg));
+    }
+}
+#mySkills .svgDiagram .bodies > g:nth-child(even) {
+    --deg: 10000deg;
+    animation: rotation 1000s infinite linear;
+}
+#mySkills .svgDiagram .bodies > g:nth-child(odd) {
+    --deg: -10000deg;
+    animation: rotation 1000s infinite linear;
+}
